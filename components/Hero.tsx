@@ -18,7 +18,7 @@ function Hero() {
                         style={{ color: '#ffffff' }}> {/* White text for heading */}
                     Meet Your Personal {""}
                     <span style={{
-                          background: 'linear-gradient(90deg, #007CF0, #00DFD8)', /* Blue-green gradient for dynamic text */
+                          background: 'linear-gradient(90deg, #2d95f7, #c723f0)', /* Blue-green gradient for dynamic text */
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent'
                         }}>
