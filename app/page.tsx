@@ -1,3 +1,4 @@
+import StarsCanvas from "@/components/background";
 import Hero from "@/components/Hero";
 import { Brain, ImageIcon, MessageSquare, Sparkles, Video } from "lucide-react";
 
@@ -76,82 +77,64 @@ const features = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen space-background">
+      <StarsCanvas/>
+      {/* Hero section */}
+      <Hero/>
 
-      {/**Hero section */}
-
-        <Hero/>
-
-      {/**Features section */}
-
-      <section className="py-20 bg-white">
+      {/* Features section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Powerfull features for Contet Creators
-            </h2>
-          </div>
-
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Powerful Features for Content Creators
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((features, index) =>{
-              const Icon =features.icon;
-              return(
-                <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-500 transition-all
-                duration-300">
-                  <div className={`
-                    w-12 h-12 rounded-lg flex items-center justify-center mb-4 
-                    ${features.iconBg}`}>
-                    <Icon className={`w-6 h-6 ${features.iconColor}`}/>
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div key={index} className="feature-card p-6 rounded-xl">
+                  <div className={`w-12 h-12 feature-icon-bg rounded-lg flex items-center justify-center mb-4`}>
+                    <Icon className="w-6 h-6 text-white"/>
                   </div>
-
-                  <h3 className="text-xl font-semibold mb-2">{features.title}</h3>
-                  <p className="text-gray-600">{features.description}</p>
-
+                  <h3 className="text-xl font-semibold mb-2 text-black">{feature.title}</h3>
+                  <p className="text-black">{feature.description}</p>
                 </div>
-              )
+              );
             })}
           </div>
-                  
         </div>
       </section>
 
-      {/**How it works section */}
-
-      <section className="py-20 bg-gray-50">
-        <div className=" container mx-auto px-4 max-w-6xl">
+      {/* How it Works Section */}
+      <section className="py-20 bg-gray-600">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-12">
             Meet Your AI Agent in 3 Simple Steps
           </h2>
-
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
-              return(
-                <div key={index} className=" text-center p-6 rounded-xl
-                 bg-white shadow-md hover:shadow-lg transition-all">
-
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600
-                  to-blue-400 rounded-full flex items-center justify-center mx-auto
-                  mb-4">
-                    <Icon className=" w-8 h-8 text-white"/>
+              return (
+                <div key={index} className="step-card text-center p-6 rounded-xl">
+                  <div className="w-16 h-16 step-icon-bg rounded-full flex items-center justify-center mx-auto mb-4 border-2">
+                    <Icon className="w-8 h-8 text-white"/>
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <p className="text-gray-50">{step.description}</p>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </section>
 
-      {/**Footer section */}
-
-      <section className="py-20 px-4 md:px-0 bg-gradient-to-r from-blue-600 to-blue-400">
+      {/* Footer section */}
+      <section className="py-20 px-4 md:px-0">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold mb-6">
             Ready to Meet Your AI Content Agent?
           </h2>
-          <p className="text-xl text-blue-50">
+          <p className="text-xl">
             Join creators leveraging AI to unlock content insights
           </p>
         </div>
@@ -160,3 +143,4 @@ export default function Home() {
     </div>
   );
 }
+

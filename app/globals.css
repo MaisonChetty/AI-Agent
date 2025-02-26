@@ -124,6 +124,21 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-gray-300;
+  }
+  .feature-card {
+    @apply  bg-gray-50 border border-gray-700 hover:border-blue-500 transition-all duration-300;
+  }
+  .feature-icon-bg {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600;
+  }
+  .step-card {
+    @apply bg-gradient-to-r from-indigo-500 to-purple-500 text-white;
+  }
+  .step-icon-bg {
+    @apply text-white;
+  }
+  .footer {
+    @apply bg-gradient-to-r from-blue-600 to-blue-400 text-white;
   }
 }
