@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 import AgentPulse from './AgentPulse'
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { Button } from './ui/button'
 
 function Header() {
@@ -41,15 +41,14 @@ function Header() {
                     </SignedIn>
 
                     <SignedOut>
-                        <SignInButton mode="modal">
+                        <Link href="/sign-in">
                             <Button
-                            variant="ghost"
-                            className='bg-gradient-to-r 
-                            from-blue-600 to-blue-400 
-                            text-transparent bg-clip-text'>
+                                variant="ghost"
+                                className='bg-gradient-to-r from-blue-600 to-blue-400 
+                                text-transparent bg-clip-text'>
                                 Sign In
                             </Button>
-                        </SignInButton>
+                        </Link>
                     </SignedOut>
                 </div>
             </div>
