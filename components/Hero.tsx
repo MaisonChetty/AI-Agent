@@ -16,7 +16,7 @@ function Hero() {
 
                     <h1 className="text-4xl md:text-6xl font-bold md:mb-6"
                         style={{ color: '#ffffff' }}> {/* White text for heading */}
-                    Meet Your Personal {""}
+                    Discover Your Stellar {""}
                     <span style={{
                           background: 'linear-gradient(90deg, #2d95f7, #c723f0)', /* Blue-green gradient for dynamic text */
                           WebkitBackgroundClip: 'text',
@@ -30,8 +30,9 @@ function Hero() {
                        style={{
                          color: '#cccccc' /* Lighter grey text for paragraph */
                        }}>
-                    Transform your video content with AI-powered analysis,
-                    transcription, and insights. Get started in seconds.
+                    Revolutionize your video content with AI-powered analysis, transcription, 
+                    and insights. Embark on a journey beyond the stars, 
+                    unlocking new dimensions of creativity and understanding.
                     </p>
 
                     {/* YoutubeVideoForm with default styles */}

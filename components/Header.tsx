@@ -18,7 +18,7 @@ function Header() {
                         {/**AgentPulse */}
                         <AgentPulse size='small' color='purple'/>
                         <h1 className='text-2xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
-                            AgentTube
+                            StariaAI
                         </h1>
                     </Link>
                 </div>
