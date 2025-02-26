@@ -12,7 +12,7 @@ function Hero() {
                  }}>
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center gap-10 text-center mb-12">
-                    <AgentPulse size="large" color="blue"/>
+                    <AgentPulse size="large" color="purple"/>
 
                     <h1 className="text-4xl md:text-6xl font-bold md:mb-6"
                         style={{ color: '#ffffff' }}> {/* White text for heading */}

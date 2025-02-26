@@ -18,7 +18,7 @@ function AgentPulse({
     const colorClasses ={
         blue: "bg-blue-500 shadow-[0_0_8px_4px_rgba(59,130,246,0.5]",
         green: "bg-green-500 shadow-[0_0_8px_4px_rgba(59,130,246,0.5]",
-        purple: "bg-purple-500 shadow-[0_0_8px_4px_rgba(59,130,246,0.5]",
+        purple: "bg-gradient-to-r from-purple-600 to-purtple-400 shadow-[0_0_8px_4px_rgba(59,130,246,0.5]",
     }
 
   return (
