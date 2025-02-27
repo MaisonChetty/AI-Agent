@@ -1,6 +1,5 @@
 "use client"
 
-import StarsCanvas from "@/components/background";
 import ChatForm from "@/components/Chat";
 import ThumbnailGeneration from "@/components/ThumbnailGeneration";
 import TitleGenerations from "@/components/TitleGenerations";
