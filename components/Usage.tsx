@@ -91,7 +91,7 @@ function Usage({
     return (
         <div>
             <div className="flex justify-between items-center mb-4 gap-4">
-                <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+                <h2 className="text-xl font-semibold text-gray-800 dark:text-white">{title}</h2>
             </div>
 
             <div className="px-4 py-2 bg-gray-50 rounded-lg">

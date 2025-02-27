@@ -26,7 +26,7 @@ const ChatForm = () => {
   };
 
   return (
-    <div className="h-full w-full flex flex-col">
+    <div className="h-full w-full flex flex-col ">
       <motion.div
         className="h-full w-full flex flex-col max-w-4xl mx-auto p-8 rounded-lg shadow-lg bg-gradient-to-r from-blue-400 to-purple-500"
         initial={{ opacity: 0 }}
