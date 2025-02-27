@@ -20,6 +20,8 @@ function Transcription({ videoId }: { videoId: string }) {
     FeatureFlag.TRANSCRIPTION
   );
 
+  console.log(videoId, setTranscript)
+
   return (
     <div className="border p-4 pb-0 rounded-xl gap-4 flex flex-col">
     <Usage featureFlag={FeatureFlag.TRANSCRIPTION} title="Transcription" />
