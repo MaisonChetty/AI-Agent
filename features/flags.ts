@@ -4,7 +4,6 @@ export enum FeatureFlag {
     ANALYSE_VIDEO = "analyse-video",
     TITLE_GENERATIONS = "title-generations",
     SCRIPT_GENERATION = "script-generation",
-    SEO_ENGINE = "seo-engine"
   }
   
   export const featureFlagEvents: Record<FeatureFlag, { event: string }> = {
@@ -23,8 +22,5 @@ export enum FeatureFlag {
     [FeatureFlag.SCRIPT_GENERATION]: {
       event: "",
     },
-    [FeatureFlag.SEO_ENGINE]: {
-        event: "",
-      },
   };
   
