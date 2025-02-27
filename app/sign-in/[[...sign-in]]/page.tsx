@@ -1,7 +1,6 @@
 'use client'
 
 import StarsCanvas from '@/components/background'
-import { SignInWithPasskeyButton } from '@/components/SignInWithPasskeyButton'
 import { Button } from '@/components/ui/button'
 import * as Clerk from '@clerk/elements/common'
 import * as SignIn from '@clerk/elements/sign-in'
@@ -58,9 +57,6 @@ export default function SignInPage() {
               </svg>
               Login with Google
             </Clerk.Connection>
-          </div>
-          <div className='space-y-2'>
-            <SignInWithPasskeyButton/>
           </div>
           <div className="space-y-4">
             <Clerk.Field name="identifier" className="space-y-2">
