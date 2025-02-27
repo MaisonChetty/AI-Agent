@@ -1,5 +1,7 @@
 "use client"
 
+import StarsCanvas from "@/components/background";
+import ChatForm from "@/components/Chat";
 import ThumbnailGeneration from "@/components/ThumbnailGeneration";
 import TitleGenerations from "@/components/TitleGenerations";
 import Transcription from "@/components/Transcription";
@@ -13,11 +15,11 @@ function AnalysisPage() {
     const {videoId} = params
 
     return (
-      <div className="xl:container mx-auto px-4 md:px-0">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="@container mx-auto px-4 md:px-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 z-10 backdrop-blur-xs">
           
           {/* Left Side */}
-          <div className="order-2 lg:order-1 flex flex-col gap-4 bg-white lg:border-r border-gray-200 p-6">
+          <div className="order-2 lg:order-1 flex flex-col gap-4  bg-white lg:border-r border-gray-200 p-6">
             
             {/* Analysis Section */}
 
@@ -53,7 +55,7 @@ function AnalysisPage() {
           <div className="order-1 lg:order-2 lg:sticky lg:top-20 h-[500px] md:h-[calc(100vh-6rem)]">
             
             {/* AI Agent Chat Section */}
-            <p>Chat</p>
+            <ChatForm/>
   
           </div>
   

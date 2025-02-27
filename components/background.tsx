@@ -6,9 +6,11 @@ import { Points, PointMaterial, Preload } from "@react-three/drei";
 // @ts-expect-error: maath/random does not have proper TypeScript definitions
 import * as random from "maath/random/dist/maath-random.esm";
 import * as THREE from "three";
+import { useTheme } from "next-themes"; // Import useTheme
 
 const StarBackground: React.FC = () => {
   const ref = useRef<THREE.Points>(null);
+  const { theme } = useTheme(); // Access the current theme
 
   // Generate stars safely
   const [sphere] = useState<Float32Array>(() => {
@@ -33,12 +35,15 @@ const StarBackground: React.FC = () => {
     }
   });
 
+  // Set star color based on the current theme
+  const starColor = theme === "dark" ? "#fff" : "#000"; // White for dark mode, black for light mode
+
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
-          color="#fff"
+          color={starColor}
           size={0.002}
           sizeAttenuation
           depthWrite={false}
@@ -49,7 +54,7 @@ const StarBackground: React.FC = () => {
 };
 
 const StarsCanvas: React.FC = () => (
-  <div className="w-full h-full overflow-y-hidden fixed inset-0 z-[-1] bg-black">
+  <div className="w-full h-full overflow-y-hidden fixed inset-0 z-[-1] bg-gray-200 dark:bg-black ">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <StarBackground />
