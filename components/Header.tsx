@@ -5,6 +5,7 @@ import React from 'react'
 import AgentPulse from './AgentPulse'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { Button } from './ui/button'
+import { ModeToggle } from './light_dark'
 
 function Header() {
   return (
@@ -25,6 +26,7 @@ function Header() {
 
                 {/**Right */}
                 <div className='flex items-center gap-4'>
+                    <ModeToggle/>
                     <SignedIn>
                         <Link href="/manage-plan">
                         <Button

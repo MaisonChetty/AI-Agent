@@ -142,3 +142,12 @@
     @apply bg-gradient-to-r from-blue-600 to-blue-400 text-white;
   }
 }
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
