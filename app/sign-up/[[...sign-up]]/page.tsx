@@ -1,6 +1,5 @@
 'use client'
 
-import StarsCanvas from '@/components/background'
 import { Button } from '@/components/ui/button'
 import * as Clerk from '@clerk/elements/common'
 import * as SignUp from '@clerk/elements/sign-up'
@@ -10,7 +9,6 @@ export default function SignUpPage() {
   return (
     <div 
     className="relative flex min-h-screen w-full items-center justify-center bg-transparent px-4 sm:px-6 lg:px-8">
-      <StarsCanvas/>
       <SignUp.Root>
         <SignUp.Step
           name="start"

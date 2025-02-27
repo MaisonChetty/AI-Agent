@@ -1,6 +1,5 @@
 "use client"
 
-import StarsCanvas from "@/components/background";
 import ChatForm from "@/components/Chat";
 import ThumbnailGeneration from "@/components/ThumbnailGeneration";
 import TitleGenerations from "@/components/TitleGenerations";
@@ -16,7 +15,6 @@ function AnalysisPage() {
 
     return (
       <div className="@container mx-auto px-4 md:px-0 ">
-        <StarsCanvas/>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 z-10 backdrop-blur-xs  ">
           
           {/* Left Side */}
