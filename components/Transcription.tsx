@@ -42,7 +42,7 @@ function Transcription({ videoId }: { videoId: string }) {
   console.log(videoId, setTranscript)
 
   return (
-    <div className="border p-4 pb-0 rounded-xl gap-4 flex flex-col border-gray-800 dark:border-purple-400">
+    <div className="border-2 p-4 pb-0 rounded-xl gap-4 flex flex-col bg-gray-200 dark:bg-gray-900 border-blue-600 dark:border-blue-400">
     <Usage featureFlag={FeatureFlag.TRANSCRIPTION} title="Transcription" />
 
     {/* Transcription */}
@@ -54,7 +54,7 @@ function Transcription({ videoId }: { videoId: string }) {
                 <span className="text-sm text-gray-400 min-w-[50px]">
                 {entry.timestamp}
                 </span>
-                <p className="text-sm text-gray-700">{entry.text}</p>
+                <p className="text-sm text-gray-800 dark:text-gray-200">{entry.text}</p>
             </div>
             ))
         ) : (

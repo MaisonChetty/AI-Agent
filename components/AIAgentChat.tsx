@@ -126,9 +126,9 @@ function AIAgentChat({ videoId }: { videoId: string }) {
   };
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="hidden lg:block px-4 pb-3 border-b border-gray-100">
-        <h2 className="text-lg font-semibold text-gray-800">AI Agent</h2>
+    <div className="flex flex-col h-full backdrop-blur-lg">
+      <div className="hidden lg:block px-4 pb-3 border-b border-blue-600 dark:border-gray-100">
+        <h2 className="text-lg max-w-20 font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">AI Agent</h2>
       </div>
 
       {/* Messages */}
@@ -139,10 +139,10 @@ function AIAgentChat({ videoId }: { videoId: string }) {
           {messages.length === 0 && (
             <div className="flex items-center justify-center h-full min-h-[200px]">
               <div className="text-center space-y-2">
-                <h3 className="text-lg font-medium text-gray-700">
+                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-200">
                   Welcome to AI Agent Chat
                 </h3>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-800 dark:text-gray-300">
                   Ask any question about your video!
                 </p>
               </div>
@@ -174,7 +174,7 @@ function AIAgentChat({ videoId }: { videoId: string }) {
                           key={i}
                           className="
                                     bg-white/50 rounded-lg p-2
-                                    space-y-2 text-gray-800
+                                    space-y-2 text-gray-800 dark:text-gray-200
                                 "
                         >
                           <div className="font-medium text-xs">
@@ -195,7 +195,7 @@ function AIAgentChat({ videoId }: { videoId: string }) {
                   </div>
                 ) : (
                   //User Message
-                  <div className="prose prose-sm max-w-none text-white ">
+                  <div className="prose prose-sm max-w-none text-white  ">
                     <ReactMarkdown>{m.content}</ReactMarkdown>
                   </div>
                 )}
@@ -207,11 +207,11 @@ function AIAgentChat({ videoId }: { videoId: string }) {
       </div>
 
       {/* Input form */}
-      <div className="border-t border-gray-100 p-4 bg-white">
+      <div className="border rounded-lg border-blue-500 dark:border-purple-400 p-4 bg-gray-200 dark:bg-gray-700">
         <div className="space-y-3">
           <form onSubmit={handleSubmit} className="flex gap-2">
             <input
-              className="flex-1 px-4 py-2 text-sm border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-4 py-2 text-sm border border-gray-700 dark:border-blue-400 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               type="text"
               placeholder={
                 !isVideoAnalysisEnabled
@@ -229,7 +229,7 @@ function AIAgentChat({ videoId }: { videoId: string }) {
                 ! isVideoAnalysisEnabled
               }
               className="px-4 py-2 bg-blue-500 text-white text-sm rounded-full
-      hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                 hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "streaming"
                 ? "AI is replying..."
@@ -241,7 +241,7 @@ function AIAgentChat({ videoId }: { videoId: string }) {
 
           <div className="flex gap-2">
             <button
-              className="text-xs xl:text-sm w-full flex items-center justify-center gap-2 py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-xs xl:text-sm w-full flex items-center justify-center gap-2 py-2 px-4 bg-gray-100 dark:bg-gray-700 border dark:border-blue-400 hover:bg-gray-200 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               onClick={generateScript}
               type="button"
               disabled={!isScriptGenerationEnabled}
@@ -255,7 +255,7 @@ function AIAgentChat({ videoId }: { videoId: string }) {
             </button>
 
             <button
-              className="text-xs xl:text-sm w-full flex items-center justify-center gap-2 py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-xs xl:text-sm w-full flex items-center justify-center gap-2 py-2 px-4 bg-gray-100 dark:bg-gray-700 border dark:border-blue-400 hover:bg-gray-200 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               onClick={generateTitle}
               type="button"
               disabled={!isTitleGenerationEnabled}
@@ -265,7 +265,7 @@ function AIAgentChat({ videoId }: { videoId: string }) {
             </button>
 
             <button
-              className="text-xs xl:text-sm w-full flex items-center justify-center gap-2 py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-xs xl:text-sm w-full flex items-center justify-center gap-2 py-2 px-4 bg-gray-100 dark:bg-gray-700 border dark:border-blue-400 hover:bg-gray-200 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               onClick={generateImage}
               type="button"
               disabled={!isImageGenerationEnabled}

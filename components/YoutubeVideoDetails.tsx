@@ -27,7 +27,7 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
 
 
   return (
-    <div className='@container bg-white rounded-xl'>
+    <div className='@container bg-gray-200 border-2 border-blue-600 dark:bg-gray-900 dark:border-purple-400 rounded-xl p-1'>
         <div className='flex flex-col gap-8'>
             {/* Video Thumnail */}
             <div className='flex-shrink-0 '>
@@ -44,7 +44,7 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
 
             {/* Video Details */}
             <div className='flex-grow space-y-4'>
-                <h1 className=' text-2xl @lg:text-3xl font-bold text-gray-900
+                <h1 className=' text-2xl @lg:text-3xl font-bold text-gray-900 dark:text-gray-200
                 leading-tight line-clamp-2'>
                     {video.title}
                 </h1>
@@ -61,10 +61,10 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
                     />
 
                     <div>
-                        <p className='text-base @md:text-lg font-semibold text-gray-900'>
+                        <p className='text-base @md:text-lg font-semibold text-gray-900 dark:text-gray-200'>
                             {video.channel.title}
                         </p>
-                        <p className='text-sm @md:text-base text-gray-600'>
+                        <p className='text-sm @md:text-base text-gray-600 dark:text-blue-200'>
                             {video.channel.subscribers} subscribers
                         </p>
                     </div>
@@ -73,9 +73,9 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
 
 
                 {/* Video Stats */}
-                <div className="grid grid-cols-2 @lg:grid-cols-4 gap-4 pt-4">
+                <div className="grid grid-cols-2 @lg:grid-cols-4 gap-4 pt-4 p-6">
                 
-                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-gray-100">
+                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-blue-400">
                         <div className="flex items-center gap-2 mb-1">
                         <Calendar className="w-4 h-4 text-gray-600" />
                         <p className="text-sm text-gray-600">Published</p>
@@ -85,7 +85,7 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
                         </p>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-gray-100">
+                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-blue-400">
                         <div className="flex items-center gap-2 mb-1">
                         <Eye className="w-4 h-4 text-gray-600" />
                         <p className="text-sm text-gray-600">Views</p>
@@ -94,7 +94,7 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
                     </div>
 
                     
-                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-gray-100">
+                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-blue-400">
                         <div className="flex items-center gap-2 mb-1">
                         <ThumbsUp className="w-4 h-4 text-gray-600" />
                         <p className="text-sm text-gray-600">Likes</p>
@@ -103,7 +103,7 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
                     </div>
                     
                     
-                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-gray-100">
+                    <div className="bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:bg-blue-400">
                         <div className="flex items-center gap-2 mb-1">
                         <MessageCircle className="w-4 h-4 text-gray-600" />
                         <p className="text-sm text-gray-600">Views</p>

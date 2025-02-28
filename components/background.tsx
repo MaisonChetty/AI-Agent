@@ -36,7 +36,7 @@ const StarBackground: React.FC = () => {
   });
 
   // Set star color based on the current theme
-  const starColor = theme === "dark" ? "#fff" : "#000"; // White for dark mode, black for light mode
+  const starColor = theme === "dark" ? "rgb(31, 106, 175)" : "#3f2992"; // White for dark mode, black for light mode
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
@@ -54,7 +54,7 @@ const StarBackground: React.FC = () => {
 };
 
 const StarsCanvas: React.FC = () => (
-  <div className="w-full h-full overflow-y-hidden fixed inset-0 z-[-1] bg-gray-200 dark:bg-black ">
+  <div className="w-full h-full overflow-y-hidden fixed inset-0 z-[-1] bg-gray-200/35 dark:bg-black ">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <StarBackground />

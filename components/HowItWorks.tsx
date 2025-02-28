@@ -24,7 +24,7 @@ function HowItWorks() {
     <div>
             <section className="py-20 bg-gray-600">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
             Meet Your AI Agent in 3 Simple Steps
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
