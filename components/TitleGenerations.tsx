@@ -6,10 +6,13 @@ import { useSchematicEntitlement } from '@schematichq/schematic-react'
 import React from 'react'
 import Usage from './Usage'
 import { Copy } from 'lucide-react'
+import { useQuery } from 'convex/react'
+import { api } from '@/convex/_generated/api'
+import { toast } from 'sonner'
 
 function TitleGenerations({videoId}: {videoId:string}) {
     const {user} = useUser()
-    const titles: { title :string; _id:string}[] = [] // TODO: // pull from db
+    const titles = useQuery(api.titles.list, {videoId, userId: user?.id ?? ""})
 
     console.log(user, titles, videoId)
 
@@ -19,7 +22,7 @@ function TitleGenerations({videoId}: {videoId:string}) {
 
     const copyToClipboard = (text:string) => {
         navigator.clipboard.writeText(text);
-        // toast.success("Copied to clipboard")
+        toast.success("Copied to clipboard")
     }
 
   return (

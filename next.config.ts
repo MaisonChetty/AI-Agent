@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       {
         hostname: "yt3.ggpht.com",
         protocol: "https"
+      },
+      {
+        hostname: "notable-impala-714.convex.cloud",
+        protocol: "https"
       }
     ]
   }

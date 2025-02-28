@@ -4,6 +4,7 @@ import "./globals.css";
 import ClientWrapper from "@/components/ClientWrapper";
 import Header from "@/components/Header";
 import StarsCanvas from "@/components/background";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,9 @@ export default function RootLayout({
         <ClientWrapper>
           <Header/>
           <StarsCanvas/>
-          {children}
+            <main>{children}</main>
+
+            <Toaster position="bottom-center"/>
         </ClientWrapper>
        
       </body>

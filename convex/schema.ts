@@ -41,4 +41,5 @@ export default defineSchema({
             .index("by_user_id", ["userId"])
             .index("by_video_id", ["videoId"])
             .index("by_user_and_video", ["userId", "videoId"]),
+            
 });
