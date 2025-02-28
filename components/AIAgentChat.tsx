@@ -228,7 +228,7 @@ function AIAgentChat({ videoId }: { videoId: string }) {
                 status === "submitted"||
                 ! isVideoAnalysisEnabled
               }
-              className="px-4 py-2 bg-blue-500 text-white text-sm rounded-full
+              className="px-4 py-2 border-2 bg-blue-500 text-white text-sm rounded-full
                  hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "streaming"
