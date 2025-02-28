@@ -44,13 +44,13 @@ function YoutubeVideoDetails({ videoId }: {videoId:string}) {
 
             {/* Video Details */}
             <div className='flex-grow space-y-4'>
-                <h1 className=' text-2xl @lg:text-3xl font-bold text-gray-900 dark:text-gray-200
+                <h1 className=' text-2xl @lg:text-3xl p-2 font-bold text-gray-900 dark:text-gray-200
                 leading-tight line-clamp-2'>
                     {video.title}
                 </h1>
 
                 {/* Channel Info */}
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center pl-2 gap-4'>
                     <Image
                         src={video.channel.thumbnail}
                         alt={video.channel.title}
