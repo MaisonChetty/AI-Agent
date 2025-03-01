@@ -6,6 +6,8 @@ import AgentPulse from './AgentPulse'
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { Button } from './ui/button'
 import { ModeToggle } from './light_dark'
+import { SidebarProvider, SidebarTrigger } from './ui/sidebar'
+import { AppSidebar } from './App-sidebar'
 
 function Header() {
   return (
@@ -15,13 +17,20 @@ function Header() {
             <div className=' flex items-center justify-between h-16'>
                 {/**Left */}
                 <div className=' flex items-center justify-between h-16'> 
-                    <Link href="/" className='flex items-center gap-4'>
+                    <Link href="/" className='flex items-center  gap-4'>
                         {/**AgentPulse */}
                         <AgentPulse size='small' color='purple'/>
                         <h1 className='text-2xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
                             StariaAI
                         </h1>
                     </Link>
+
+                    <div className='flex text-white z-0'>
+                        <SidebarProvider>
+                            <AppSidebar/>
+                            <SidebarTrigger />
+                        </SidebarProvider>
+                    </div>
                 </div>
 
                 {/**Right */}

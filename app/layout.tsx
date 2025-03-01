@@ -34,6 +34,7 @@ export default function RootLayout({
         <ClientWrapper>
           <Header/>
           <StarsCanvas/>
+            
             <main>{children}</main>
 
             <Toaster position="bottom-center"/>

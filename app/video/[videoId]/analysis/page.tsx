@@ -63,6 +63,9 @@ function AnalysisPage() {
 
 
     return (
+      <div className="flex">
+        <div className="w-36 z-50">
+        </div>
       <div className="container mx-auto px-4 md:px-0 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 z-10 backdrop-blur-xs  ">
           
@@ -109,6 +112,7 @@ function AnalysisPage() {
           </div>
   
         </div>
+      </div>
       </div>
     );
   }
