@@ -7,7 +7,6 @@ import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { Button } from './ui/button'
 import { ModeToggle } from './light_dark'
 import { SidebarProvider, SidebarTrigger } from './ui/sidebar'
-import { AppSidebar } from './App-sidebar'
 
 function Header() {
   return (
@@ -27,7 +26,6 @@ function Header() {
 
                     <div className='flex text-white z-0'>
                         <SidebarProvider>
-                            <AppSidebar/>
                             <SidebarTrigger />
                         </SidebarProvider>
                     </div>

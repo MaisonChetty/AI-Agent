@@ -12,6 +12,7 @@ import { FeatureFlag } from "@/features/flags";
 import { useUser } from "@clerk/nextjs";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 function AnalysisPage() {
     const params = useParams<{videoId:string}>()
@@ -26,10 +27,10 @@ function AnalysisPage() {
         // Analyse the video (add video to db here)
         const response = await createOrGetVideo(videoId as string, user.id);
         if (!response.success) {
-          // toast.error("Error creating or getting video", {
-          //   description: response.error,
-          //   duration: 10000,
-          // });
+          toast.error("Error creating or getting video", {
+            description: response.error,
+            duration: 10000,
+          });
         } else {
           setVideo(response.data);
         }

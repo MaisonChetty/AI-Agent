@@ -13,6 +13,17 @@ export const getVideoById = query({
         .unique();
     },
   });
+
+  // Get all videos by user ID
+  export const getAllVideosByUser = query({
+    args: { userId: v.string() },
+    handler: async (ctx, args) => {
+      return await ctx.db
+        .query("videos")
+        .withIndex("by_user_id", (q) => q.eq("userId", args.userId))
+        .collect();
+    },
+  });
   
   export const createVideoEntry = mutation({
     args: {
